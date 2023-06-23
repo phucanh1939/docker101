@@ -1,12 +1,9 @@
 services:
-  app:
-    image: node:18-alpine
-    command: sh -c "yarn install && yarn run dev"
+  docker101:
+    image: docker101
+    container_name: docker101
     ports:
       - 127.0.0.1:3000:3000
-    working_dir: /app
-    volumes:
-      - ./:/app
     environment:
       MYSQL_HOST: mysql
       MYSQL_USER: root
